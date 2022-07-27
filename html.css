@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(168, 165, 129);
+}
+
+.toolbox-cont{
+    height: 5rem;
+    background-color: rgb(105, 104, 104);
+    display: flex;
+    align-items: center;
+}
+
+.toolbox-cont >*{
+    margin-left: 4rem;
+    border-radius: 2px;
+
+}
+.toolbox-priority-cont{
+    height: 3.5rem;
+    width: 16rem;
+    background-color: rgb(89, 89, 89);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action-btn-cont{
+    height: 3.5rem;
+    width: 8rem;
+    background: rgb(89, 89, 89);
+    display: flex;
+}
+
+.action-btn-cont>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 2rem;
+    color: white;
+}
+
+.remove-btn{
+    font-size: 2.1rem;
+}
+.color{
+    height: 1.5rem;
+    width: 2.5rem;
+    border-radius: 2px;
+}
+.lightpink{
+    background-color: #fd42b5;
+}
+.lightgreen{
+    background-color: rgb(31, 228, 31);
+}
+.lightblue{
+    background-color: rgb(82, 187, 253);
+}
+.yellow{
+    background-color: rgb(255, 225, 0);
+}
+
+.action-btn-cont >*:hover {
+    background-color: rgb(68, 63, 63);
+}
+
+.modal-cont {
+    height: 50vh;
+    width: 45vw;
+    background: lightblue;
+    position: absolute;
+    left: calc(( 100vw - 45vw)/2);
+    top: calc(( 100vh - 40vh)/2);
+    display: none;
+    box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px ;
+}
+
+.textarea-cont {
+    height: 100%;
+    width: 75%;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #fdfdfd;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+.priority-colors-cont {
+    height: 100%;
+    width: 25%;
+    background-color: rgb(89, 89, 89);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.priority-color{
+    height: 2.5rem;
+    width: 60%;
+}
+
+.border {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.ticket-cont{
+    height: 10rem;
+    width: 15rem;
+    background-color: white;
+}
+
+.ticket-color{
+    height: 1rem;
+}
+
+.ticket-id {
+    height: 2rem;
+    padding: 0.4rem;
+}
+
+.task-area {
+    height: calc( 100% - 1rem - 2rem - 2rem );
+    background-color: rgb(168, 167, 167);
+    padding: 0.4rem;
+    outline: none;
+    font-size: 1.3rem;
+}
+
+.ticket-lock {
+    height: 2rem;
+    display: flex;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    justify-content: flex-end;
+    color: #6f757d ;
+    margin-top: 0.2rem;
+}
+.main-cont {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .modal-cont {
+        width: 60vw;
+        left: calc( ( 100vw - 60vw ) / 2 );
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .modal-cont {
+        width: 75vw;
+        height: 55vh;
+        top: calc( ( 100vh - 55vh ) / 2 );
+        left: calc( ( 100vw - 75vw ) / 2 );
+        flex-direction: column;
+    }
+    .textarea-cont {
+        width: 100%;
+        height: 75%;
+    }
+    .priority-colors-cont {
+        flex-direction: row;
+        width: 100%;
+        height: 25%;
+    }
+    .priority-color {
+        width: 17%;
+    }
+    .toolbox-cont > * {
+        margin-left: 2rem;
+        border-radius: 2px;
+    }
+}
